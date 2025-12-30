@@ -1,4 +1,4 @@
-# Intellingent Inventory System
+# Intelligent Inventory System
 
 ## Project Overview
 
