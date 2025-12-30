@@ -1,4 +1,4 @@
-# Intelling Inventory System
+# Intellingent Inventory System
 
 ## Project Overview
 
