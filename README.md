@@ -7,7 +7,7 @@ It combines machine learning-based demand forecasting with classical inventory m
 
 The goal is to move beyond forecasting alone and create a decision-support system that helps determine when to reorder and how much to reorder for each product.
 
-# Key Features #
+## Key Features ##
 - Product-level demand forecasting using XGBoost
 - Time-series feature engineering (lags, rolling statistics, calendar effects)
 - Inventory optimization using:
@@ -19,6 +19,10 @@ The goal is to move beyond forecasting alone and create a decision-support syste
    - ABC Classification
 - Automated reorder decision engine
 - Interactive Streamlit dashboard for inventory monitoring and decision support
+
+## Data ##
+
+Dataset used: https://www.kaggle.com/datasets/anirudhchauhan/retail-store-inventory-forecasting-dataset
 
 ## Methodology ##
 
