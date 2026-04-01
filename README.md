@@ -75,4 +75,4 @@ Then open: http://localhost:8501
 - Successfully translated forecasts into real-time inventory decisions
 - Built a complete pipeline from data → model → optimization → dashboard
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+![Frontend Image]("C:\Users\MAITHILI\Downloads\project_img.png")
