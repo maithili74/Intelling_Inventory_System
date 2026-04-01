@@ -23,16 +23,12 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("📦 Inventory Reorder Decision Tool")
+st.title("Inventory Reorder Decision Tool")
 st.markdown("**Store:** S001")
 
 
-# In[3]:
+#Loading data
 
-
-# =====================================
-# LOAD DATA
-# =====================================
 @st.cache_data
 def load_data():
     return pd.read_csv(
@@ -42,20 +38,16 @@ def load_data():
 df = load_data()
 
 
-# In[4]:
+#Selecting the product
 
-
-# =====================================
-# PRODUCT SELECTION
-# =====================================
 product_list = sorted(df['Product_ID'].unique())
 selected_product = st.selectbox("Select Product", product_list)
 
 product_df = df[df['Product_ID'] == selected_product].iloc[0]
 
-# =====================================
-# METRICS DISPLAY
-# =====================================
+
+#Displaying the metrics
+
 col1, col2, col3 = st.columns(3)
 
 col1.metric(
@@ -73,10 +65,10 @@ col3.metric(
     value=int(product_df['Safety_Stock'])
 )
 
-# =====================================
-# INVENTORY STATUS
-# =====================================
-st.subheader("📌 Inventory Status")
+
+#Inventory Status
+
+st.subheader(" Inventory Status")
 
 if product_df['Inventory_Status'] == "REORDER NOW":
     st.error("🚨 REORDER NOW")
@@ -87,9 +79,9 @@ if product_df['Inventory_Status'] == "REORDER NOW":
 else:
     st.success("✅ Inventory Level is OPTIMAL")
 
-# =====================================
-# GAUGE CHART
-# =====================================
+
+#Gauge Chart
+
 st.subheader("📊 Inventory Level Gauge")
 
 max_stock = product_df['Max_Stock_Level']
@@ -116,10 +108,10 @@ fig = go.Figure(go.Indicator(
 
 st.plotly_chart(fig, use_container_width=True)
 
-# =====================================
-# PRODUCT SUMMARY
-# =====================================
-st.subheader("📄 Product Summary")
+
+#Product Summary
+
+st.subheader("Product Summary")
 
 summary_df = pd.DataFrame({
     "Metric": [
@@ -137,9 +129,6 @@ summary_df = pd.DataFrame({
 })
 
 st.table(summary_df)
-
-
-# In[ ]:
 
 
 
