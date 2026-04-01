@@ -35,21 +35,36 @@ The goal is to move beyond forecasting alone and create a decision-support syste
 - Dashboard: Streamlit
 - Environment: Jupyter Notebook, Anaconda
 
-  ## Project Structure ##
+## Project Structure ##
 
-  Personal Project
-  ->Codes
-    ->datapreprocess_model.ipynb
-    ->inventory.ipynb
-    ->decision_rule.ipynb
-    ->frontend.py
-  -> Datasets
+Personal_Project/
+│
+├── Codes/                          # Main code directory
+│   ├── datapreprocess_model.ipynb  # Data preprocessing and demand forecasting model development
+│   ├── inventory.ipynb             # Inventory optimization calculations (safety stock, reorder point, EOQ, etc.)
+│   ├── decision_rule.ipynb         # Decision rule implementation for reorder logic
+│   └── frontend.py                 # Streamlit frontend for visualizing inventory status and reorder recommendations
+│
+├── Datasets/                       
+│   ├── forecast_output_test.csv  
+│   ├── inventory_decision_output.csv           
+│   └── inventory_optimization_output.csv     
+│
+└── README.md 
 
 ## How to run ##
 
-Install necessary dependencies: pip install pandas numpy scikit-learn xgboost streamlit matplotlib plotly
-Run the Streamlit App: python -m streamlit run app.py
-Open localhost: http://localhost:8501
+Install Dependencies:
+
+pip install pandas numpy scikit-learn xgboost streamlit matplotlib plotly
+
+Run the Streamlit App
+
+python -m streamlit run app.py
+
+Then open:
+
+http://localhost:8501
 
 ## Results ##
 
