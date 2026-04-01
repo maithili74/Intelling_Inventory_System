@@ -36,7 +36,7 @@ The goal is to move beyond forecasting alone and create a decision-support syste
 - Environment: Jupyter Notebook, Anaconda
 
 ## Project Structure ##
-
+```bash
 Personal_Project/
 │
 ├── Codes/                          # Main code directory
@@ -50,7 +50,8 @@ Personal_Project/
 │   ├── inventory_decision_output.csv 
 │   └── inventory_optimization_output.csv 
 │
-└── README.md                       
+└── README.md    
+```
 
 ## How to run ##
 
